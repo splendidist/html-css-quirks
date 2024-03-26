@@ -1,0 +1,80 @@
+/* Gaps under images */
+
+body {
+  background-color: blueviolet;
+}
+
+.image-container {
+  background-color: white; /*here you can see the white colour below the image inside the body*/
+}
+
+.image-container img {
+  display: block; /* This fixes the issue, Or use 'vertical-align: bottom;' */
+}
+
+/*Margin collapsing*/
+
+/*.box1 {
+  margin-bottom: 20px;
+}
+
+.box2 {
+  margin-top: 30px; 
+}
+  
+/* Instead of combining their margins, one margin (the larger one) is used, which can lead to unexpected layout results. */
+
+/*solution*/
+
+.box1 {
+  padding-bottom: 20px;
+}
+
+.box2 {
+  padding-top: 30px;
+}
+
+/* or
+
+.box1 {
+  margin-bottom: 20px;
+}
+
+.box2 {
+  margin-top: 30px;
+  overflow: hidden;
+} */
+
+/*OTHER*/
+
+/*Box Sizing
+
+Issue: By default, the width and height of an element are calculated excluding padding and borders (box-sizing: content-box). This can lead to unexpected layout size calculations.
+
+Solution: Use box-sizing: border-box;. This makes the width and height include padding and borders, simplifying layout calculations.
+Z-Index and Positioning
+Issue: The z-index property only affects elements that are positioned (position: relative, absolute, or fixed). Z-index on statically positioned elements has no effect.
+
+Solution: Ensure the element has a position value other than static when using z-index.
+
+Flexbox and Percentage Heights
+Issue: Percentage heights on flex items are calculated based on the height of the flex container, not the height of the flex item itself.
+
+Solution: Use min-height instead of height on flex items.
+
+CSS Specificity Conflicts
+Issue: CSS rules with higher specificity override rules with lower specificity, even if the lower specificity rule is defined later in the stylesheet.
+
+Solution: Prefer classes instead of IDs for styling, and avoid inline styles for CSS rules. CSS classes will apply the last rule that appears in the stylesheet, regardless of specificity.
+
+Prefer class selectors over IDs for styling
+
+.good-selector {
+  color: blue;
+}
+
+Avoid using IDs for styling due to high specificity
+
+#specific-selector {
+  color: red;
+} */
